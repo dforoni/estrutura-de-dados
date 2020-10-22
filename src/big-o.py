@@ -16,4 +16,5 @@ def soma(n):
         soma += i
     return soma
 
-soma(10)
+s = soma(10)
+print(s)
