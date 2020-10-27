@@ -53,6 +53,16 @@ class VetorOrdenado:
             if i == self.ultima_posicao:
                 return -1
 
+    # Exclusão O(n)      
+    def excluir(self, valor):
+        posicao = self.pesquisar(valor)
+        if posicao == -1:
+            return -1
+        else:
+          for i in range(posicao, self.ultima_posicao):
+            self.valores[i] = self.valores[i + 1]
+        
+        self.ultima_posicao -= 1
 
 
 ## Teste Vetor Vazio
@@ -69,3 +79,7 @@ vetor.imprime()
 ## Teste Pesquuisa
 
 vetor.pesquisar(6) 
+
+## Teste Exclusão
+vetor.excluir(4)
+vetor.imprime()
