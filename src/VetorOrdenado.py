@@ -43,6 +43,16 @@ class VetorOrdenado:
         self.valores[posicao] = valor
         self.ultima_posicao += 1
 
+    # Pesquisar - O(n)
+    def pesquisar(self, valor):
+        for i in range(self.ultima_posicao + 1):
+            if self.valores[i] > valor:
+                return -1
+            if self.valores[i] == valor:
+                return i
+            if i == self.ultima_posicao:
+                return -1
+
 
 
 ## Teste Vetor Vazio
@@ -53,7 +63,9 @@ vetor.imprime()
 ## Teste Insere 
 
 vetor.insere(4)
-vetor.imprime()
-
 vetor.insere(6)
 vetor.imprime()
+
+## Teste Pesquuisa
+
+vetor.pesquisar(6) 
