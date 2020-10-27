@@ -12,7 +12,6 @@ class VetorNaoOrdenado:
         self.valores = np.empty(self.capacidade, dtype=int)
 
     # O(n)
-
     def imprime(self):
         if self.ultima_posicao == -1:
             print('O vetor está vazio!')
